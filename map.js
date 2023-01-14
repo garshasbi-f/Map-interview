@@ -295,17 +295,28 @@ var jungle = L.layerGroup([
 ================================================*/
 
 var baseMaps = {
-  "OSM": osm,
+  OSM: osm,
   "Water color map": watercolor,
-  "Dark": dark,
+  Dark: dark,
   "Google Street": googleStreets,
   "Google Satellite": googleSat,
 };
 
 var overlayMaps = {
-    Cities: cities,
-    Lake: lake,
-    Jungle: jungle,
-  };
+  Cities: cities,
+  Lake: lake,
+  Jungle: jungle,
+};
 
 L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+//RULER
+var options = {
+  position: "topright",
+
+  lengthUnit: {
+    display: "km",
+    decimal: 2,
+  },
+};
+L.control.ruler(options).addTo(map);
