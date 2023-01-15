@@ -61,4 +61,4 @@ run the HTML on a browser.
 
 ## Screenshot
 
-![alt text](img/Screenshot.png)
+![alt text](img/screen.png)
